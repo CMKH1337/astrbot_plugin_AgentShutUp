@@ -3,5 +3,5 @@ display_name: AgentShutUp
 desc: 令agent运行时的工具调用消息不被断句功能断句
 version: v0.1.0
 author: CMKH
-repo: ""
+repo: "https://github.com/CMKH1337/astrbot_plugin_AgentShutUp"
 astrbot_version: ">=4.16,<5"
