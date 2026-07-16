@@ -1,4 +1,4 @@
-# agentShutUp
+# AgentShutUp
 
 本插件会阻止实际调用过工具的 Agent 最终回复被 AstrBot 的分段回复/断句功能拆分。
 
@@ -6,7 +6,7 @@
 
 ## 使用前配置
 
-本插件不负责合并 Agent 中间消息。请先在 AstrBot WebUI 中完成以下配置：
+本插件不负责合并 Agent 中间消息。要让插件生效请必须在 AstrBot WebUI 中完成以下配置：
 
 - 关闭 **流式输出**：`provider_settings.streaming_response = false`
 - 开启 **合并 Agent 中间消息**：`provider_settings.buffer_intermediate_messages = true`
@@ -24,10 +24,14 @@
 ```
 
 ## 工作效果
+开启AgentShutUp前：
 
-- 普通 LLM 回复且没有调用工具：保持 AstrBot 原有的分段回复行为。
-- Agent 调用过一个或多个工具：Agent 最终回复不再按 `。？！~` 等规则拆分，而是作为一条完整消息链发送。
-- Agent 中间消息的缓冲与合并：仍由 AstrBot 的 **合并 Agent 中间消息** 配置控制。
+<img width="325" height="693" alt="214f6ee822ca4505e0c1c680a40e5e16" src="https://github.com/user-attachments/assets/0823fae1-3b8e-4b66-99a5-8fb814f9b2d6" />
+
+开启AgentShutUp后：
+
+<img width="416" height="363" alt="54c97a5051ae934f44afff85d49b45e7" src="https://github.com/user-attachments/assets/ef2f1962-25ba-4bff-ba5e-802542eeb155" />
+
 
 ## 安装
 
@@ -48,3 +52,6 @@
 ## 限制
 
 为了跳过断句，插件会在发送前将调用工具后的 Agent 最终结果从 `LLM_RESULT` 改为 `GENERAL_RESULT`。因此 AstrBot 内置 TTS 不会自动处理这条 Agent 最终文本；普通 LLM 的 TTS 行为不受影响。
+
+## 么么
+欢迎发issue指出问题，我非常乐意改进插件
