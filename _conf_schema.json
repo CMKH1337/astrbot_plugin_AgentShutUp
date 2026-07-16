@@ -1,0 +1,7 @@
+{
+  "enabled": {
+    "type": "bool",
+    "description": "Enable agentShutUp handling for Agent final replies",
+    "default": true
+  }
+}
