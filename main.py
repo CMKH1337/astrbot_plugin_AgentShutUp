@@ -9,7 +9,7 @@ from astrbot.core.message.message_event_result import ResultContentType
 @register(
     "astrbot_plugin_agentShutUp",
     "CMKH1337",
-    "令agent运行时的工具调用消息不被断句功能断句",
+    "令agent运行时的工具调用消息不被断句功能断",
     "v0.1.0",
 )
 class AgentShutUpPlugin(Star):
